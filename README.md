@@ -1,4 +1,4 @@
-This repository contains all the code from the article [Introduction to test-driven development in JavaScript](https://github.com/pluralsight/guides/blob/master/introduction-to-test-driven-development-in-javascript/article.md).
+This repository contains all the code from the article [Introduction to test-driven development in JavaScript](http://tutorials.pluralsight.com/front-end-javascript/introduction-to-test-driven-development-in-javascript).
 
 # How to run the unit tests
 
