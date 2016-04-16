@@ -1,0 +1,695 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for tdd\DateTime.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">tdd/</a> DateTime.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>95/95</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>44/44</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>34/34</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>95/95</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">122×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">75×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">45×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">60×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">45×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">105×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">45×</span>
+<span class="cline-any cline-yes">45×</span>
+<span class="cline-any cline-yes">45×</span>
+<span class="cline-any cline-yes">21×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">45×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">213×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">45×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">75×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">75×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">90×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">158×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">75×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">45×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">49×</span>
+<span class="cline-any cline-yes">49×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">45×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">45×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">45×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">45×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">45×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">75×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">75×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">49×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">45×</span>
+<span class="cline-any cline-yes">18×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">15×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">60×</span>
+<span class="cline-any cline-yes">60×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">117×</span>
+<span class="cline-any cline-yes">117×</span>
+<span class="cline-any cline-yes">1797×</span>
+<span class="cline-any cline-yes">1797×</span>
+<span class="cline-any cline-yes">6010×</span>
+<span class="cline-any cline-yes">6010×</span>
+<span class="cline-any cline-yes">6010×</span>
+<span class="cline-any cline-yes">940×</span>
+<span class="cline-any cline-yes">940×</span>
+<span class="cline-any cline-yes">940×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1797×</span>
+<span class="cline-any cline-yes">857×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">117×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">60×</span>
+<span class="cline-any cline-yes">60×</span>
+<span class="cline-any cline-yes">885×</span>
+<span class="cline-any cline-yes">465×</span>
+<span class="cline-any cline-yes">465×</span>
+<span class="cline-any cline-yes">120×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">465×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">420×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">57×</span>
+<span class="cline-any cline-yes">57×</span>
+<span class="cline-any cline-yes">57×</span>
+<span class="cline-any cline-yes">739×</span>
+<span class="cline-any cline-yes">350×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">350×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">348×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">389×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">386×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">379×</span>
+<span class="cline-any cline-yes">379×</span>
+<span class="cline-any cline-yes">379×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">45×</span>
+<span class="cline-any cline-yes">45×</span>
+<span class="cline-any cline-yes">45×</span>
+<span class="cline-any cline-yes">450×</span>
+<span class="cline-any cline-yes">345×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">45×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">143×</span>
+<span class="cline-any cline-yes">133×</span>
+<span class="cline-any cline-yes">67×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">66×</span>
+<span class="cline-any cline-yes">57×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">"use strict";
+var DateTime = (function () {
+&nbsp;
+    var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+        dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+&nbsp;
+    function createDateTime(date) {
+        return {
+            get year() {
+                return date.getUTCFullYear();
+            },
+            get monthName() {
+                return monthNames[date.getUTCMonth()];
+            },
+            get month() {
+                return date.getUTCMonth() + 1;
+            },
+            get day() {
+                return dayNames[date.getUTCDay()];
+            },
+            get date() {
+                return date.getUTCDate();
+            },
+            get ordinalDate() {
+                var n = this.date;
+                var suffix = "th";
+                if (n &lt; 4 || n &gt; 20) {
+                    suffix = ["st", "nd", "rd"][n % 10 - 1] || suffix;
+                }
+                return n + suffix;
+            },
+            get hours() {
+                return date.getUTCHours();
+            },
+            get hours12() {
+                return this.hours % 12 || 12;
+            },
+            get minutes() {
+                return date.getUTCMinutes();
+            },
+            get seconds() {
+                return date.getUTCSeconds();
+            },
+            get ampm() {
+                return this.hours &lt; 12 ? "am" : "pm";
+            },
+            get offset() {
+                return date.getTime();
+            },
+            set year(v) {
+                date.setUTCFullYear(v);
+            },
+            set month(v) {
+                date.setUTCMonth(v - 1);
+            },
+            set monthName(v) {
+                var index = monthNames.indexOf(v);
+                if (index &lt; 0) {
+                    throw new Error("'" + v + "' is not a valid month name.");
+                }
+                date.setUTCMonth(index);
+            },
+            set day(v) {
+                throw new Error("The property 'day' is readonly.");
+            },
+            set date(v) {
+                date.setUTCDate(v);
+            },
+            set ordinalDate(v) {
+                date.setUTCDate(+v.slice(0, -2));
+            },
+            set hours(v) {
+                date.setUTCHours(v);
+            },
+            set hours12(v) {
+                date.setUTCHours(v % 12);
+            },
+            set minutes(v) {
+                date.setUTCMinutes(v);
+            },
+            set seconds(v) {
+                date.setUTCSeconds(v);
+            },
+            set ampm(v) {
+                if (!/^(am|pm)$/.test(v)) {
+                    throw new Error("'" + v + "' is not 'am' or 'pm'.");
+                }
+                if (v !== this.ampm) {
+                    date.setUTCHours((this.hours + 12) % 24);
+                }
+            },
+            set offset(v) {
+                date.setTime(v);
+            },
+            toString: function (formatString) {
+                formatString = formatString || "YYYY-M-D H:m:s";
+                return toString(this, formatString);
+            }
+        };
+    }
+&nbsp;
+    var formatAbbreviations = {
+        YYYY: "year",
+        YY: "shortYear",
+        MMMM: "monthName",
+        M: "month",
+        dddd: "day",
+        D: "date",
+        Do: "ordinalDate",
+        H: "hours",
+        h: "hours12",
+        m: "minutes",
+        s: "seconds",
+        a: "ampm"
+    };
+    var maxAbbreviationLength = 4;
+    var formatPatterns = {
+        year: /^-?[0-9]+/,
+        monthName: /January|February|March|April|May|June|July|August|September|October|November|December/,
+        month: /[1-9][0-9]?/,
+        day: /Sunday|Monday|Tuesday|Wednesday|Thursday|Friday|Saturday/,
+        date: /[1-9][0-9]?/,
+        ordinalDate: /[1-9][0-9]?(st|nd|rd|th)/,
+        hours: /[0-9]{1,2}/,
+        hours12: /[0-9]{1,2}/,
+        minutes: /[0-9]{1,2}/,
+        seconds: /[0-9]{1,2}/,
+        ampm: /am|pm/
+    };
+&nbsp;
+&nbsp;
+    function tokenize(formatString) {
+        var tokens = [];
+        for (var i = 0; i &lt; formatString.length; i++) {
+            var slice, propertyName;
+            for (var j = maxAbbreviationLength; j &gt; 0; j--) {
+                slice = formatString.slice(i, i + j);
+                propertyName = formatAbbreviations[slice];
+                if (propertyName) {
+                    tokens.push({ type: "property", value: propertyName });
+                    i += j - 1;
+                    break;
+                }
+            }
+            if (!propertyName) {
+                tokens.push({ type: "literal", value: slice });
+            }
+        }
+        return tokens;
+    }
+&nbsp;
+    function toString(dateTime, formatString) {
+        var tokens = tokenize(formatString);
+        return tokens.map(function (token) {
+            if (token.type === "property") {
+                var value = dateTime[token.value];
+                if (token.value === "minutes" || token.value === "seconds") {
+                    value = ("00" + value).slice(-2);
+                }
+                return value;
+            }
+            return token.value;
+        }).join("");
+    }
+&nbsp;
+    function parse(string, formatString) {
+        var tokens = tokenize(formatString);
+        var properties = {};
+        tokens.forEach(function (token, i) {
+            if (token.type === "literal") {
+                var value = token.value,
+                    slice = string.slice(0, value.length);
+                if (slice !== value) {
+                    throw new Error("String does not match format. Expected '" + slice + "' to equal '" + value + "'.");
+                }
+                string = string.slice(value.length);
+            } else {
+                var format = token.value,
+                    pattern = formatPatterns[format],
+                    match = string.match(pattern);
+                if (!match || !match.length) {
+                    throw new Error("String does not match format. Expected '" + string + "' to start with the pattern " + pattern + ".");
+                }
+                match = match[0];
+                string = string.slice(match.length);
+                properties[format] = match;
+            }
+        });
+        var propertyOrder = ["seconds", "minutes", "hours12", "ampm", "hours", "ordinalDate", "date", "monthName", "month", "year"];
+        var date = createDateTime(new Date(0));
+        propertyOrder.forEach(function (property) {
+            if (properties[property]) {
+                date[property] = properties[property];
+            }
+        });
+        return date;
+    }
+&nbsp;
+    return function (date, formatString) {
+        if (date !== undefined) {
+            if (date instanceof Date) {
+                return createDateTime(date);
+            }
+            if (typeof formatString === "string") {
+                return parse(date, formatString);
+            }
+            throw new Error(String(date) + " is not a Date object.");
+        }
+        return createDateTime(new Date());
+    };
+})();</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Mon Mar 07 2016 11:08:03 GMT+0800 (China Standard Time)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>
